@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig3.Kenan</title>
+    <h3>Bestilling av kinobiletter</h3>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="index.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="velgFilm">Velg film:</label>
+                <select id="velgFilm" type="text" class="form-control">
+                    <option></option>
+                    <option>Don't look up</option>
+                    <option>The revenant</option>
+                    <option>Verdens verste menneske</option>
+                    <option>Parasitt</option>
+                </select>
+                <lable id="nullFilm" style="color: red"></lable>
+            </div>
+            <div class="form-group">
+                <label for="antall">Antall: </label>
+                </label><input class="form-control" type="number" id="antall" min="1">
+                <label style="color: red" id="nullAntall"></label>
+            </div>
+            <div class="form-group">
+                <label for="fornavn">Fornavn:</label>
+                <input type="text" id="fornavn" class="form-control">
+                <lable id="nullFonavn" style="color: red"></lable>
+            </div>
+            <div class="form-group">
+                <label for="etternavn">Etternavn:</label>
+                <input type="text" id="etternavn" class="form-control">
+                <lable id="nullEtternavn" style="color: red"></lable>
+            </div>
+            <div class="form-group">
+                <label for="telefonNr">Telefonnr:</label>
+                <input type="tel" id="telefonNr" class="form-control">
+                <label id="nullTelefonnr" style="color: red"></label>
+            </div>
+            <div class="form-group">
+                <lable for="epost">Epost:</lable>
+                <input type="email" id="epost" class="form-control">
+                <label id="nullEpost" style="color: red"></label>
+            </div>
+            <div class="form-group">
+                <button onclick="kjopbillett()" class="btn btn-primary">Kjøp billett</button>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle billetter</h3>
+            <div class="form-group">
+                <table id="output" class="table table-striped"></table>
+            </div>
+            <div class="form-group">
+                <button onclick="slett()" class="btn btn-danger">slett alle billettene</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
